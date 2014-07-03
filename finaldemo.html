@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+
+    </title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type="text/javascript" src="angular.min.js"></script>
+
+    <script>
+        function StoreController($scope) {
+
+            var car = [
+                {
+                    name: "Tavera",
+                    price: "10L",
+                    description: "this car is big",
+                    canPurchase: true
+                },
+                {
+                    name: "Ferrari",
+                    price: "80L",
+                    description: "this is a premium car",
+                    canPurchase: false
+
+                },
+                {
+
+                    name: "Maruti800",
+                    price: "3L",
+                    description: "this is a cheap car",
+                    canPurchase: true
+                }
+            ]
+            this.products = car;
+
+            $scope.call = function call() {
+                alert('hello');
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<div ng-app="">
+    <div ng-controller="StoreController as store">
+        <div ng-repeat="product in store.products">
+            <h1>{{product.name}}</h1>
+
+            <h2>${{product.price}}</h2>
+
+            <p>{{product.description}}</p>
+            <button ng-show="product.canPurchase" ng-click="call()">
+                Add to cart
+            </button>
+            <hr>
+        </div>
+    </div>
+</div>
+</body>
+</html>

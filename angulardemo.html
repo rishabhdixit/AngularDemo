@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+
+
+    </title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script type = "text/javascript" src = "angular.min.js"></script>
+
+    <script>
+                function AdminUserController($scope) {
+                $scope.data = {
+                      message:'yo yo honey singh'
+                 }
+               }
+                function AdminController($scope){
+                    $scope.data={
+                            message : 'hahaha'
+                            }
+                }
+                function UserController()
+                {
+
+                }
+     </script>
+</head>
+<body>
+<div ng-app>
+    <div ng-controller="AdminUserController">
+        <input ng-model="data.message">
+        <h1><b>{{data.message +" world !!!"}}</b></h1>
+
+
+    <div ng-controller="AdminController">
+            <input ng-model ="data.message">
+            <h1><b>{{data.message +" world !!!!"}}</b></h1>
+    </div>
+    <div ng-controller="UserController">
+            <input ng-model ="data.message">
+            <h1>{{data.message +" world !!!!"}}</h1>
+    </div>
+   </div>
+</div>
+</body>
+</html>
