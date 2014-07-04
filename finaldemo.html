@@ -36,8 +36,8 @@
             ]
             this.products = car;
 
-            $scope.call = function call() {
-                alert('hello');
+            $scope.call = function call(obj) {
+                alert(obj.name+" car added to the cart");
             }
 
         }
@@ -53,7 +53,7 @@
             <h2>${{product.price}}</h2>
 
             <p>{{product.description}}</p>
-            <button ng-show="product.canPurchase" ng-click="call()">
+            <button ng-show="product.canPurchase" ng-click="call(product)">
                 Add to cart
             </button>
             <hr>
